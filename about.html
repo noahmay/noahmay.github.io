@@ -1,4 +1,166 @@
-<?php require "parts/header.php" ?>
+<!doctype html>
+<html lang="sv">
+	<head>
+		<meta charset="utf-8">
+		<title>Noah Mayerhofer</title>
+
+		<meta name="description" content="">
+		<link href='https:/fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="/css/skeleton.css">
+		<link rel="stylesheet" href="/css/style.css">
+
+
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="">
+
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/manifest.json">
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0097a7">
+      <meta name="theme-color" content="#0097A7">
+		<link rel="shortcut icon" href="/img/favicon.png">
+
+		<!--[if lt IE 9]>
+			<script src="/html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<script src="/js/jquery-2.2.4.min.js"></script>
+		<script src="/js/background-blur.min.js"></script>
+		<script src="/js/masonry.js"></script>
+		<script src="/js/button.js"></script>
+		<script src="/js/main.js"></script>
+
+	   <meta name="viewport" content="width=device-width">
+	   <!--<meta name="generator" content="">-->
+
+		<meta property="og:title" content="">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="">
+		<meta property="og:image" content="">
+		<meta property="og:site_name" content="">
+		<meta property="og:description" content="">
+
+	</head>
+	<body class="">
+      <!--<div class="sidebar-hamburger sidebar-toggle">
+         <i class="material-icons">menu</i>
+      </div>-->
+
+      <button class="sidebar-hamburger sidebar-toggle">
+         <span></span>
+      </button>
+
+      <div class="sidebar_overlay sidebar-toggle"></div>
+		<header>
+			<div class="image-wrapper">
+				<h2>Noah Mayerhofer</h2>
+				<!--<img src="https:/i.gyazo.com/63cef35d9a58dbcb2fca791933ec80f2.png" alt="">-->
+			</div>
+					<nav id="main" role="navigation">
+						<a href="/" title=""><i class="material-icons">home</i>Hem</a>
+                  <a href="/about.html" title=""><i class="material-icons">face</i>Om mig</a>
+                  <a href="/projects.html" title=""><i class="material-icons">work</i>Projekt</a>
+                  <!--<a href="/blog" title=""><i class="material-icons">chat</i>Blogg</a>-->
+                  <!--<a href="/lab" title=""><i class="material-icons">code</i>Lab</a>-->
+					</nav>
+
+ 		</header>
+
+      <script>
+         var siebar_resize_width = 300,
+             mobile_size = 1493,
+             menu_closed = true;
+
+            if(window.innerWidth <= mobile_size)
+            {
+               set_mobile();
+
+            }
+            else
+            {
+               set_desktop();
+            }
+
+
+         function set_mobile()
+         {
+            /start page
+         /*   $("#start-page-image div").css("left",0);
+            $("#start-page-image div").css("min-width","100%");*/
+
+            $("header").addClass("mobile");
+            $(".sidebar-toggle").addClass("mobile");
+            $("header").css("left",-siebar_resize_width)
+            $(".content-wrapp").css("margin-left",0)
+         }
+
+         function set_desktop(){
+            close_menu();
+            /start page
+            /*$("#start-page-image div").css("left","16%");
+            $("#start-page-image div").css("min-width","85%");*/
+
+            $("header").removeClass("mobile");
+            $(".sidebar-toggle").removeClass("mobile");
+            $(".content-wrapp").css("margin-left","17%");
+            $("header").css("left", 0)
+         }
+
+         function open_menu(){
+            $("header").css("left",0);
+            $(".sidebar_overlay").css("opacity",0.75);
+            $(".sidebar_overlay").css("z-index",101);
+            $(".sidebar-hamburger").addClass("is-active");
+            menu_closed = false;
+
+
+         }
+
+         function close_menu(){
+            $("header").css("left",-siebar_resize_width);
+            $(".sidebar_overlay").css("opacity",0);
+            $(".sidebar_overlay").css("z-index",-1);
+            $(".sidebar-hamburger").removeClass("is-active");
+            menu_closed = true;
+         }
+
+            $(window).bind('resize', function()
+            {
+
+               if(typeof sizewait != 'undefined'){
+                  clearTimeout(sizewait);
+               }
+
+               sizewait = setTimeout(function()
+               {
+               if(window.innerWidth <= mobile_size)
+               {
+                  set_mobile();
+
+               }
+               else
+               {
+                  set_desktop();
+               }
+               },200);
+            });
+
+
+
+         $( ".sidebar-toggle" ).click(function() {
+            if(window.innerWidth <= mobile_size && menu_closed){
+               open_menu();
+            }
+
+            else if(window.innerWidth <= mobile_size && !menu_closed)
+            {
+               close_menu();
+            }
+            $(".no-transition").removeClass("no-transition");
+         });
+
+
+      </script>
 
 <section class="content-wrapp about">
    <div class="container">
@@ -9,9 +171,9 @@
                <h2 class="center">Noah Mayerhofer</h2>
                   <p class="">
                      Hej,<br><br>
-                     Jag är <?php echo getAge('1997-11-15');?> år och söker till in till högskolan i höst.<!--studerar just nu till civilingenjör på Lunds Tekniska Högskola.-->
+                     Jag är 19 år och söker till in till högskolan i höst.<!--studerar just nu till civilingenjör på Lunds Tekniska Högskola.-->
                      Jag är en självlärd webbutvecklare och webbdesigner från Västerås. Jag började
-                     utveckla för ungefär <?php echo getAge('2011-05-01');?> år sedan och under åren har jag funnit en kärlek för
+                     utveckla för ungefär 6 år sedan och under åren har jag funnit en kärlek för
                      programmering och problemlösning. Under min gymnasietid var jag med och drev
                      två UF företag inom webbranchen. Jag har inriktat mig på back-end utveckling
                      men har även jobbat med bildredegering och design.
@@ -128,7 +290,7 @@
 
             <div class="grid-item card four columns">
                <div class="image-wrapper">
-                  <img src="<?php echo BASE_URL;?>/img/about/beseen.jpg" alt="">
+                  <img src="/img/about/beseen.jpg" alt="">
                   <div class="image-cut"></div>
                </div>
                <div class="card-content">
@@ -140,7 +302,7 @@
 
             <div class="grid-item card four columns gold">
                <div class="image-wrapper">
-                  <img src="<?php echo BASE_URL;?>/img/about/webbstjarnan_teknik.jpg" alt="">
+                  <img src="/img/about/webbstjarnan_teknik.jpg" alt="">
                   <div class="image-cut"></div>
                </div>
                <div class="card-content">
@@ -153,7 +315,7 @@
 
             <div class="grid-item card four columns silver">
                <div class="image-wrapper">
-                  <img src="<?php echo BASE_URL;?>/img/about/beseen_website.jpg" alt="">
+                  <img src="/img/about/beseen_website.jpg" alt="">
                   <div class="image-cut"></div>
                </div>
                <div class="card-content">
@@ -169,7 +331,7 @@
 
             <div class="grid-item card four columns silver">
                <div class="image-wrapper">
-                  <img src="<?php echo BASE_URL;?>/img/about/uf_logo.jpg" alt="">
+                  <img src="/img/about/uf_logo.jpg" alt="">
                   <div class="image-cut"></div>
                </div>
                <div class="card-content">
@@ -182,7 +344,7 @@
 
             <div class="grid-item card four columns silver">
                <div class="image-wrapper">
-                  <img src="<?php echo BASE_URL;?>/img/about/ardetoppet_website.jpg" alt="">
+                  <img src="/img/about/ardetoppet_website.jpg" alt="">
                   <div class="image-cut"></div>
                </div>
                <div class="card-content">
@@ -195,7 +357,7 @@
 
             <div class="grid-item card four columns bronze">
                <div class="image-wrapper">
-                  <img src="<?php echo BASE_URL;?>/img/about/webbstjarnan_logo.jpg" alt="">
+                  <img src="/img/about/webbstjarnan_logo.jpg" alt="">
                   <div class="image-cut"></div>
                </div>
                <div class="card-content">
@@ -210,7 +372,7 @@
          <div class="row">
             <div class="grid-item card four columns bronze">
                <div class="image-wrapper">
-                  <img src="<?php echo BASE_URL;?>/img/about/uf_logo.jpg" alt="">
+                  <img src="/img/about/uf_logo.jpg" alt="">
                   <div class="image-cut"></div>
                </div>
                <div class="card-content">
@@ -224,3 +386,9 @@
       </div>
    </div>
 </section>
+
+<!--<footer id="bottom">
+   test
+</footer>-->
+</body>
+</html>

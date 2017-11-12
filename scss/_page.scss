@@ -42,6 +42,16 @@
     top: 30%;
     left: 30%;
     line-height: 45px;
+
+    @media screen and (max-width: 876px) {
+        font-size: 35px;
+        line-height: 35px;
+        left: 20%;
+    }
+    @media screen and (max-width: 681px) {
+    font-size: 25px;
+    line-height: 25px;
+    }
 }
 
 .grid{

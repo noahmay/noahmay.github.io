@@ -1,0 +1,182 @@
+body {
+    background: rgb(204,204,204); 
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    color:	#2d3d3f;
+  }
+  page {
+    background: white;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  }
+  page[size="A4"] {  
+    width: 21cm;
+    height: 29.7cm; 
+  }
+  page[size="A4"][layout="landscape"] {
+    width: 29.7cm;
+    height: 21cm;  
+  }
+  page[size="A3"] {
+    width: 29.7cm;
+    height: 42cm;
+  }
+  page[size="A3"][layout="landscape"] {
+    width: 42cm;
+    height: 29.7cm;  
+  }
+  page[size="A5"] {
+    width: 14.8cm;
+    height: 21cm;
+  }
+  page[size="A5"][layout="landscape"] {
+    width: 21cm;
+    height: 14.8cm;  
+  }
+  @media print {
+    body, page {
+      /*margin: 0;*/
+      box-shadow: none;
+    }
+
+    body{
+      background: none;
+    }
+    
+  }
+
+#top{
+    height: 200px;
+    position: relative;
+    background-color: #0097a7;
+    color: #fff;
+}
+
+#top .mdi{
+  font-size: 20px;
+}
+
+
+#top .container {
+  position: absolute;
+  top: 0;
+  left: 220px;
+}
+
+#top .container h1 {
+  margin-bottom: 10px;
+}
+
+#top .container .subtitle{
+  font-weight: 500;
+}
+
+#top .container .contact .icon-info:first-child{
+  padding-top: 25px;
+}
+
+#top .container .contact .icon-info{
+  padding-bottom: 3px;
+}
+
+#top .container .contact .icon-info span{
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.content{
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.section-header{
+  font-weight: 300;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.section-header .line{
+  display: block;
+  height: 1px;
+  background-color:	#0097a7;
+  margin-top: 5px;
+}
+
+#work{
+  width: 70%;
+  float: left;
+}
+
+#work h3{
+  margin-bottom: 5px;
+}
+
+#work .duration{
+  color:#686d6e;
+}
+
+#work .technology{
+  padding-right: 0.6em;
+  border-radius: 10rem;
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: #0097a7;
+  color: #fff;
+}
+
+.sidebar{
+  width: 29%;
+  float: right;
+}
+
+#education .location{
+  color:#686d6e;
+  font-size: 14px;
+}
+
+#education .duration{
+  color:#8d9495;
+  font-size: 12px;
+}
+
+#skills i {
+  font-size: 40px;
+}
+
+#awards .awards-item .issuer{
+  color:#8d9495;
+  font-size: 12px;
+}
+
+#awards .awards-item .mdi.first{
+  color:#FFD700;
+}
+#awards .awards-item .mdi.second{
+  color:#C0C0C0;
+}
+
+#language .langauge-item .level{
+  color:#8d9495;
+  font-size: 12px;
+}
+
+#volunteer{
+  width: 70%;
+  float: left;
+}
+
+#volunteer h3{
+  margin-bottom: 5px;
+}
+
+#volunteer .duration{
+  color:#686d6e;
+}

@@ -177,6 +177,8 @@ body {
 
 #skills i {
   font-size: 40px;
+  padding-bottom: 5px;
+  display: inline-block;
 }
 
 #awards .awards-item .issuer{

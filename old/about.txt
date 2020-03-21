@@ -1,5 +1,0 @@
-Theme name:    Material
-Description:   Made by me
-Author name:   Noah Mayerhofer
-Author site:   http://noahmay.com
-License:       http://licence.visualidiot.com

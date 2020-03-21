@@ -62,6 +62,7 @@ body {
   position: absolute;
   top: 0;
   left: 220px;
+  right: 0;
 }
 
 #top .container h1 {
@@ -80,10 +81,32 @@ body {
   padding-bottom: 3px;
 }
 
-#top .container .contact .icon-info span{
+#top .container .contact .icon-info .info-text{
   vertical-align: middle;
   margin-left: 10px;
 }
+
+#top .container .links{
+  position: absolute;
+  top:0.83em;
+  right:20px;
+}
+
+#top .container .links a{
+ color: #fff;
+ fill: #fff;
+ text-decoration: none;
+}
+
+#top .container .links a svg{
+  width: 18px;
+  height: 18px;
+  margin-right: 3px;
+ }
+
+#top .container .links a span{
+  vertical-align: top;
+ }
 
 .content{
   width: 80%;

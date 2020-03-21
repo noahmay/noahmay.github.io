@@ -90,14 +90,17 @@ body {
 
 #top .container .links{
   position: absolute;
-  top:0.83em;
-  right:20px;
+  top: 20px;
+  right: 20px;
 }
 
 #top .container .links a{
- color: #fff;
- fill: #fff;
- text-decoration: none;
+  color: #fff;
+  fill: #fff;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 5px;
+  font-size: 14px;;
 }
 
 #top .container .links a svg{

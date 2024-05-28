@@ -167,6 +167,10 @@ body {
   color: #fff;
 }
 
+.work-item {
+  margin-right: 1rem;
+}
+
 .sidebar{
   width: 29%;
   float: right;

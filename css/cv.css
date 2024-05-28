@@ -148,11 +148,11 @@ body {
   margin-block-start: 0.5em;
 }
 
-#work .duration{
+.work .duration{
   color:#686d6e;
 }
 
-#work .technology{
+.work .technology{
   padding-right: 0.6em;
   border-radius: 10rem;
   display: inline-block;
